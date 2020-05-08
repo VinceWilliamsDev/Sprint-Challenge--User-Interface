@@ -47,17 +47,25 @@ table {
 	border-spacing: 0;
 }
 
+
+/* General styles */
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html {
+    font-size: 62.5%
+}
+
+html, body, {
     height: 100%;
     font-family: 'Roboto', sans-serif;
 }
 
+
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -67,31 +75,72 @@ p {
 }
 
 .container {
-    width: 800px;
+    width: 40%;
     margin: 0 auto;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/* Header styles */
+
+.header-container {
+    display: flex;
+    Justify-content: space-between;
+    margin: 3% 0 6% 0;
+    align-items: baseline;
+}
+
+.header-image {
+    max-width: 17%;
+}
+.nav-container {
+    width: 70%;
+}
+.nav-container nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+/* Top content section */
+
+.top-image {
+    width: 100%;
+    margin-bottom: 3%;
 }
 
 .top-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+    margin-bottom: 2%;
+    border-bottom: .5%x dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 3%; 
+     
 }
 
 .middle-content {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed black;
+    margin-bottom: 2%;
+    border-bottom: .5% dashed black;
 }
 
 .middle-content h2 {
-    padding: 0 2%;
+    padding: 0 3%;
     margin-bottom: 0;
 }
 
@@ -105,16 +154,55 @@ p {
     width: 12.5%;
     height: 100px;
     background: black;
-    margin: 20px 2.5%;
+    margin: 3% 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+#box1 {
+    background-color: teal;
+}
+
+#box2 {
+    background-color: gold;
+}
+
+#box3 {
+    background-color: cadetblue;
+}
+
+#box4 {
+    background-color: coral;
+}
+
+#box5 {
+    background-color: crimson;
+}
+
+#box6 {
+    background-color: forestgreen;
+}
+
+#box7 {
+    background-color: darkorchid;
+}
+
+#box8 {
+    background-color: hotpink;
+}
+
+#box9 {
+    background-color: indigo;
+}
+
+#box10 {
+    background: dodgerblue;
+}
 .bottom-content {
     display: flex;
-    margin: 0 2% 20px;
+    margin: 0 2% 2%;
     justify-content: space-around;
 }
 
@@ -136,11 +224,62 @@ footer nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 2%;
-    font-size: 14px;
+    padding: 3% 2%;
+    font-size: 1.4rem;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+@media(max-width: 800px) {
+    .header-container {
+        justify-content: space-around;
+    }
+    
+    .nav-container {
+        font-size: 1.2rem;
+    }
+    .top-content .text-container {
+        width: 95%;
+        font-size: 1rem;
+    }
+
+    .middle-content .boxes .box {
+        width: 35%;
+    }
+
+    .bottom-content .text-container {
+        width: 50%;
+    }
+}
+
+@media(max-width: 500px) {
+    .header-container: {
+        flex-direction: column;
+    }
+    
+
+    .middle-content .boxes .box {
+        width: 60%;
+    }
+    .header-container {
+        flex-direction: column;
+    }
+    .nav-container nav {
+        flex-direction: column;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    .bottom-content .text-container {
+        width: 95%;
+    }
 }
